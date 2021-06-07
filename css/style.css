@@ -2,11 +2,7 @@
     background-image: url(../assets/images/header-bg-img.png);
     background-repeat: no-repeat;
     background-position: center center;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-size:1920px 1080px;
 }
 ul.menu__list {
     margin: 0; /* Обнуляем значение отступов */
@@ -28,9 +24,9 @@ ul.personal__list {
 }
 .smoothies{
     background-color:white;
-    background-attachment: fixed;
     background-size:1920px 1080px;
     /* -webkit-background-size: cover;
+    background-attachment: fixed;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; */
