@@ -1,14 +1,57 @@
-.header{
+header{
     background-image: url(../assets/images/header-bg-img.png);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size:1920px 1080px;
+    width: 1920px;
+    height: 1080px;
+    margin: 0;
+    padding:0;
+}
+.header__top{
+    display: flex;
+    justify-content: space-between;
+    height:225px;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+.header__content{
+    display:flex;
+    justify-content: center;
+}
+.menu__list{
+    width:540 px;
+    display:flex;
+    justify-content: space-between;
+}
+.content__btn{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    align-self:center;
+    width: 280px;
+    height: 70px;
+    background-color: #0aa566;
+    border:none;
+    border-radius:120px;
+    font-size: 24pt;
+    color: white;
+    -webkit-border-radius:120px;
+    -moz-border-radius:120px;
+    -ms-border-radius:120px;
+    -o-border-radius:120px;
+}
+.menu__link{
+    color:white;
+    text-decoration: none;
+    font-size: 16pt;
 }
 ul.menu__list {
     margin: 0; /* Обнуляем значение отступов */
     padding: 4px; /* Значение полей */
 }
-    ul.menu__list li {
+ul.menu__list li {
     display: inline; /* Отображать как строчный элемент */
     margin-right: 5px; /* Отступ слева */
     padding: 3px; /* Поля вокруг текста */
