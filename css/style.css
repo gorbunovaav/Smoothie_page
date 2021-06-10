@@ -1,30 +1,82 @@
-header{
-    background-image: url(../assets/images/header-bg-img.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 1920px;
-    height: 1080px;
+/* common styles */
+@font-face {
+	font-family: 'MyriadProRegular'; 
+	src: local('MyriadProRegular'),
+		url(/fonts/MyriadProRegular.ttf); 
+}
+ul{
+    list-style: none;
     margin: 0;
-    padding:0;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+html,body{
+    font-family: "MyriadProRegular";
+}
+
+/* header */
+
+header{
+    height: 100vh;
+    background: url(../assets/images/header-bg-img.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    color: white;
 }
 .header__top{
+    padding: 70px 100px 100px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.menu__list{
+    display: flex;
+}
+
+.menu__list-item{
+    margin-right: 35px;
+}
+.header__right-block{
+    width: 420px;
     display: flex;
     justify-content: space-between;
-    height:225px;
-    padding-top: 100px;
-    padding-left: 100px;
-    padding-right: 100px;
-
+    align-items:center;
 }
+.personal__list{
+    display: flex;
+    align-items:center;
+    /* margin-right: 100px; */
+}
+.social__list{
+    display: flex;
+}
+.personal__list-item{
+    margin-right:45px;
+}
+.social__list-item{
+    margin-right: 10px;
+}
+.personal__list-item:last-child{
+    margin-right: 0;
+}
+
 .header__content{
     display:flex;
     justify-content: center;
 }
-.menu__list{
-    width:540 px;
-    display:flex;
-    justify-content: space-between;
-}
+
 .content__btn{
     display:flex;
     justify-content: space-around;
@@ -34,37 +86,67 @@ header{
     height: 70px;
     background-color: #0aa566;
     border:none;
-    border-radius:120px;
+    border-radius:35px;
     font-size: 24pt;
     color: white;
-    -webkit-border-radius:120px;
-    -moz-border-radius:120px;
-    -ms-border-radius:120px;
-    -o-border-radius:120px;
+    -webkit-border-radius:35px;
+    -moz-border-radius:35px;
+    -ms-border-radius:35px;
+    -o-border-radius:35px;
 }
 .menu__link{
     color:white;
     text-decoration: none;
     font-size: 16pt;
 }
-ul.menu__list {
-    margin: 0; /* Обнуляем значение отступов */
-    padding: 4px; /* Значение полей */
+.social__link{
+    display: inline-block;
+    height:35px;
+    min-width: 35px;
+    max-width: 35px;
+    background-color: white;
+    text-align: center;
+    line-height: 2.3;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+}
+.personal__number{
+    display: inline-block;
+    height:15px;
+    min-width: 15px;
+    max-width: 15px;
+    background-color: white;
+    text-align: center;
+    line-height: 1;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+}
+
+/* ul.menu__list {
+    margin: 0;
+    padding: 4px; 
 }
 ul.menu__list li {
-    display: inline; /* Отображать как строчный элемент */
-    margin-right: 5px; /* Отступ слева */
-    padding: 3px; /* Поля вокруг текста */
-}
-ul.personal__list {
-    margin: 0; /* Обнуляем значение отступов */
-    padding: 4px; /* Значение полей */
-}
+    display: inline;
+    margin-right: 5px;
+    padding: 3px;
+}*/
+/* ul.personal__list {
+    margin: 0;
+    padding: 4px;
+} */
+/*
     ul.personal__list li {
-    display: inline; /* Отображать как строчный элемент */
-    margin-right: 5px; /* Отступ слева */
-    padding: 3px; /* Поля вокруг текста */
-}
+    display: inline; 
+    margin-right: 5px; 
+    padding: 3px; 
+}  */
 .smoothies{
     background-color:white;
     background-size:1920px 1080px;
@@ -74,5 +156,5 @@ ul.personal__list {
     -o-background-size: cover;
     background-size: cover; */
 }
-li{
-    list-style-type: none;}
+/* li{
+    list-style-type: none;} */
