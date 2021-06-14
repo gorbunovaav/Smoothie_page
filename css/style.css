@@ -1,13 +1,19 @@
 /* common styles */
 @font-face {
-	font-family: 'MyriadProRegular'; 
-	src: local('MyriadProRegular'),
-		url(/fonts/MyriadProRegular.ttf); 
+	font-family: 'Mulish-Black'; 
+	src: local('Mulish-Black'),
+		url(/fonts/Mulish-Black.ttf); 
 }
 @font-face {
-	font-family: 'MyriadProBold'; 
-	src: local('MyriadProBold'),
-		url(/fonts/MyriadProBold.ttf); 
+	font-family: 'Mulish-Bold'; 
+	src: local('Mulish-Bold'),
+		url(/fonts/Mulish-Bold.ttf); 
+}
+
+@font-face {
+	font-family: 'Mulish-ExtraBold'; 
+	src: local('Mulish-ExtraBold'),
+		url(/fonts/Mulish-ExtraBold.ttf); 
 }
 ul{
     list-style: none;
@@ -25,7 +31,7 @@ a:hover{
 }
 
 html,body{
-    font-family: "MyriadProRegular";
+    font-family: "Mulish-Black";
 }
 
 /* header */
@@ -52,6 +58,8 @@ header{
 
 .menu__list-item{
     margin-right: 35px;
+    font-family: "Mulish-Bold";
+    font-size: 16pt;
 }
 .header__right-block{
     width: 420px;
@@ -176,6 +184,7 @@ ul.menu__list li {
     text-align:center;
     margin-top: 96px;
     margin-bottom: 53px;
+    font-family: 'Mulish-ExtraBold';
 }
 .smoothies__text{
     font-size: 18pt;
@@ -218,7 +227,8 @@ ul.menu__list li {
 /* about */
 
 .about{
-    height: 100vh;
+    display:flex;
+    height: 800px;
     background: url(../assets/images/bg_about1.png) no-repeat;
     background-position: center center;
     background-size: cover;
@@ -227,3 +237,23 @@ ul.menu__list li {
     -o-background-size: cover;
     color: white;
 }
+.about__img{
+    margin-top: 60px;
+    margin-left: 140px;
+    margin-right: 140px;
+}
+.reasons__heading{
+    font-size: 55pt;
+    font-weight: bold;
+    color:#ffffff;
+    text-align:left;
+    margin-top: 10px;
+}
+.reasons__heading--green{
+    color:#cae941;
+    margin-bottom: 7px;
+}
+.reasons__list{
+    list-style-image: url(../assets/images/smoothie_list.png);
+}
+
