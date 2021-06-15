@@ -1,19 +1,19 @@
 /* common styles */
 @font-face {
-	font-family: 'Mulish-Black'; 
-	src: local('Mulish-Black'),
-		url(/fonts/Mulish-Black.ttf); 
+	font-family: 'Mulish-Regular'; 
+	src: local('Mulish-Regular'),
+		url(../fonts/Mulish-Regular.ttf); 
 }
 @font-face {
 	font-family: 'Mulish-Bold'; 
 	src: local('Mulish-Bold'),
-		url(/fonts/Mulish-Bold.ttf); 
+		url(../fonts/Mulish-Bold.ttf); 
 }
 
 @font-face {
 	font-family: 'Mulish-ExtraBold'; 
 	src: local('Mulish-ExtraBold'),
-		url(/fonts/Mulish-ExtraBold.ttf); 
+		url(../fonts/Mulish-ExtraBold.ttf); 
 }
 ul{
     list-style: none;
@@ -31,13 +31,16 @@ a:hover{
 }
 
 html,body{
-    font-family: "Mulish-Black";
+    font-family: "Mulish-Regular";
+    width:100%;
+    min-width: 1910px;
 }
 
 /* header */
 
 header{
     height: 100vh;
+    width: 1920px;
     background: url(../assets/images/header-bg-img.png) no-repeat;
     background-position: center center;
     background-size: 100%;
@@ -59,9 +62,10 @@ header{
 .menu__list-item{
     margin-right: 35px;
     font-family: "Mulish-Bold";
-    font-size: 16pt;
+    font-size: 16px;
 }
 .header__right-block{
+    margin-right: 100px;
     width: 420px;
     display: flex;
     justify-content: space-between;
@@ -69,7 +73,7 @@ header{
 }
 .personal__list{
     display: flex;
-    align-items:center;
+    align-items:baseline;
     /* margin-right: 100px; */
 }
 .social__list{
@@ -101,7 +105,7 @@ header{
     background-color: #0aa566;
     border:none;
     border-radius:35px;
-    font-size: 24pt;
+    font-size: 24px;
     color: white;
     -webkit-border-radius:35px;
     -moz-border-radius:35px;
@@ -111,7 +115,7 @@ header{
 .menu__link{
     color:white;
     text-decoration: none;
-    font-size: 16pt;
+    font-size: 16px;
 }
 .social__link{
     display: inline-block;
@@ -127,14 +131,24 @@ header{
     -ms-border-radius:50%;
     -o-border-radius:50%;
 }
+.personal__link{
+    display:flex;
+
+}
+.personal__list-item--cart{
+    display: flex;
+    
+}
 .personal__number{
-    display: inline-block;
-    height:15px;
+    display: flex;
+    font-size: 10px;
+    height: 15px;
     min-width: 15px;
     max-width: 15px;
     background-color: white;
     text-align: center;
-    line-height: 1;
+    vertical-align: 5px;
+    line-height: 4;
     border-radius:50%;
     -webkit-border-radius:50%;
     -moz-border-radius:50%;
@@ -167,7 +181,7 @@ ul.menu__list li {
 .smoothies{
     background-color:white;
     width: 1920px;
-    height: 1080px;
+    height: 870px;
     display: flex;
     flex-flow: column nowrap;
 
@@ -178,23 +192,25 @@ ul.menu__list li {
     background-size: cover; */
 }
 .smoothies__heading{
-    font-size: 50pt;
+    font-size: 50px;
     font-weight: bold;
     color:#f7ae3b;
     text-align:center;
-    margin-top: 96px;
-    margin-bottom: 53px;
+    margin-top: 100px;
+    margin-bottom: 50px;
     font-family: 'Mulish-ExtraBold';
 }
 .smoothies__text{
-    font-size: 18pt;
+    margin-top: 0;
+    font-size: 18px;
     align-self:center;
     text-align:center;
-    width: 928px;
+    line-height: 35px;
+    width: 910px;
     margin-bottom: 67px;
 }
 .icons__img{
-    object-fit: cover
+    object-fit: cover;
 }
 .icons__list{
     display: flex;
@@ -210,6 +226,7 @@ ul.menu__list li {
 .icons__list-item{
     display: flex;
     margin-right: 140px;
+    width:240px;
     align-self:center;
     flex-flow: column nowrap;
     flex:1;
@@ -217,11 +234,12 @@ ul.menu__list li {
     justify-content: center;
 }
 .icons__heading{
-    font-size: 25pt;
+    font-size: 25px;
     color:#f2612d;
     font-weight: bold;
     align-self:center;
     text-align:center;
+    font-family: Mulish-ExtraBold;
 }
 
 /* about */
@@ -243,17 +261,58 @@ ul.menu__list li {
     margin-right: 140px;
 }
 .reasons__heading{
-    font-size: 55pt;
+    
+    font-size: 50px;
     font-weight: bold;
     color:#ffffff;
     text-align:left;
-    margin-top: 10px;
+    margin-top: 100px;
+    font-family: Mulish-ExtraBold;
+    width: 600px;
 }
 .reasons__heading--green{
+    display: inline;
     color:#cae941;
-    margin-bottom: 7px;
+    margin-bottom: 5px;
+    margin-top: 0;
 }
 .reasons__list{
     list-style-image: url(../assets/images/smoothie_list.png);
+    font-size: 21px;
+    margin-bottom: 50px;
+}
+.reasons__list-item{
+    margin-bottom:22px;
+}
+.text--bold{
+    font-weight: bold;
 }
 
+.reasons__btn{
+    display:flex;
+    flex-flow:row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 380px;
+    height: 60px;
+    background-color: #0aa566;
+    border-color: #f8b231;
+    border-width: 3px;
+    border-radius:35px;
+    color: white;
+    font-family: Mulish-ExtraBold;
+    font-size: 21px;
+    -webkit-border-radius:35px;
+    -moz-border-radius:35px;
+    -ms-border-radius:35px;
+    -o-border-radius:35px;
+}
+/* products */
+.products{
+    height:720px;
+    background-image: url(../assets/images/);
+}
+.products__list{
+    display: flex;
+    justify-content: space-around;
+}
