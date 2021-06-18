@@ -40,7 +40,6 @@ html,body{
 
 header{
     height: 100vh;
-    width: 1920px;
     background: url(../assets/images/header-bg-img.png) no-repeat;
     background-position: center center;
     background-size: 100%;
@@ -96,14 +95,16 @@ header{
 }
 
 .content__btn{
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
     align-self:center;
+    display:flex;
+    flex-flow:row nowrap;
+    align-items: center;
+    justify-content: space-around;
     width: 280px;
     height: 70px;
     background-color: #0aa566;
-    border:none;
+    border:#0aa566;
+    border-width: 1px;
     border-radius:35px;
     font-size: 24px;
     color: white;
@@ -180,7 +181,6 @@ ul.menu__list li {
 
 .smoothies{
     background-color:white;
-    width: 1920px;
     height: 870px;
     display: flex;
     flex-flow: column nowrap;
@@ -246,6 +246,7 @@ ul.menu__list li {
 
 .about{
     display:flex;
+    align-items: center;
     height: 800px;
     background: url(../assets/images/bg_about1.png) no-repeat;
     background-position: center center;
@@ -261,7 +262,6 @@ ul.menu__list li {
     margin-right: 140px;
 }
 .reasons__heading{
-    
     font-size: 50px;
     font-weight: bold;
     color:#ffffff;
@@ -310,9 +310,168 @@ ul.menu__list li {
 /* products */
 .products{
     height:720px;
-    background-image: url(../assets/images/);
+    margin:0;
 }
 .products__list{
     display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin: 0;
+}
+#Dark_Chocolate{
+    background-color:#663019;
+}
+#Vegan_Lettuce{
+    background-color:#178274;
+}
+#Lemon_Ginger{
+    background-color:#f9ae40;
+}
+#Turmeric_Garlic{
+    background-color:#c5461c;
+}
+
+.product__heading{
+    font-size: 24px;
+    text-align:center;
+    color:white;
+    font-family: Mulish-Regular;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+.product__text{
+    font-size: 21px;
+    text-align:center;
+    color:white;
+    margin-top: 0;
+    margin-bottom: 62px;
+}
+.product__list-item{
+    display:flex;
+    flex-direction: column;
+    padding-top: 120px;
+    width:475px;
+    height: 600px;
+    flex:1;
+}
+.product__img{
+    align-self:center;
+}  
+.product__btn{
+    align-self:center;
+    display:flex;
+    flex-flow:row nowrap;
+    align-items: center;
     justify-content: space-around;
+    width: 200px;
+    height: 60px;
+    background:none;
+    border-color: white;
+    border-width: 3px;
+    border-radius:35px;
+    color: white;
+    font-family: Mulish-ExtraBold;
+    font-size: 21px;
+    -webkit-border-radius:35px;
+    -moz-border-radius:35px;
+    -ms-border-radius:35px;
+    -o-border-radius:35px;
+}
+/* story */
+.story{
+    display:flex;
+    background-color:white;
+    height:881px;
+}
+.story__heading{
+    margin-top:260px;
+    font-size: 50px;
+    color:#f7ae3b;
+    font-family: Mulish-ExtraBold;
+}
+.story__text{
+    width:515px;
+    font-size: 18px;
+    line-height: 35px;
+    margin-top:42px;
+    margin-bottom: 55px;
+}
+.story__inner{
+    margin-right:205px;
+    padding-left:305px;
+}
+.story__img-wrap{
+    margin-top:120px;
+}
+.story__btn{
+    align-self:center;
+    display:flex;
+    flex-flow:row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 302px;
+    height: 60px;
+    background-color:#0aa566;
+    border:none;
+    border-width: 3px;
+    border-radius:35px;
+    color: white;
+    font-family: Mulish-ExtraBold;
+    font-size: 21px;
+    -webkit-border-radius:35px;
+    -moz-border-radius:35px;
+    -ms-border-radius:35px;
+    -o-border-radius:35px;
+}
+/* testimonials */
+.testimonials{
+    height: 100vh;
+    background:url(../assets/images/testimonials_bg.png);
+    height:720px;
+}
+.testimonials__feedback{
+    display: flex;
+}
+.testimonials__heading{
+    padding-top:189px;
+    text-align: center;
+    font-size: 50px;
+    color:#f7ae3b;
+    font-family: Mulish-ExtraBold;
+}
+.testimonials__heading--orange{
+    color:#f2612d;
+}
+.feedback__quote{
+    margin-left: 590px;
+    width:490px;
+    text-align: center;
+}
+/* blog */
+.blog{
+    height:785px;
+    background:white;
+}
+.blog__heading{
+    padding-top: 100px;
+    padding-left: 360px;
+    font-size: 50px;
+    color:#f7ae3b;
+    font-family: Mulish-ExtraBold;
+}
+/* instagram */
+.instagram{
+    height: 460px;
+    background:white;
+}
+.instagram__link{
+    padding-bottom: 50px;
+    padding-left: 888px;
+    color:#0aa566;
+    font-size: 24px;
+    font-family: Mulish-ExtraBold;
+}
+.instagram__list{
+    display: flex;
+    margin-bottom:10px;
 }
