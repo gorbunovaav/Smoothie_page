@@ -34,6 +34,7 @@ html,body{
     font-family: "Mulish-Regular";
     width:100%;
     min-width: 1910px;
+    margin:0;
 }
 
 /* header */
@@ -49,43 +50,71 @@ header{
     color: white;
 }
 .header__top{
-    padding: 70px 100px 100px;
+    padding: 86px 60px 100px;
+    margin-bottom:24px;
     display: flex;
     justify-content:space-between;
     align-items:center;
+    position: relative;
 }
 
 .menu__list{
     display: flex;
+    align-items: center;
+    
 }
 
 .menu__list-item{
     margin-right: 35px;
     font-family: "Mulish-Bold";
     font-size: 16px;
+    position: relative;
+}
+
+.header__logo{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 .header__right-block{
-    margin-right: 100px;
+    margin-right: 106px;
     width: 420px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .personal__list{
     display: flex;
     margin-right: 135px;
+    align-items: center;
+    position: relative;
+}
+.personal__list::after{
+    content:"";
+    width: 47px;
+    height:2px;
+    background-color:#ffd68f;
+    position: absolute;
+    left:260px;
 }
 .social__list{
     display: flex;
-    /* align-items:center; */
+    align-items:center;
 }
 .personal__list-item{
     margin-right:45px;
+    position: relative;
 }
 .social__list-item{
     margin-right: 10px;
 }
 .personal__list-item:last-child{
-    margin-right: 0;
+    margin-right: 0px;
 }
 
 .header__content{
@@ -130,9 +159,7 @@ header{
     -ms-border-radius:50%;
     -o-border-radius:50%;
 }
-.personal__link{
-    display:flex;
-}
+
 .personal__number{
     background-color: white;
     display: inline-block;
@@ -147,27 +174,10 @@ header{
     -moz-border-radius:50%;
     -ms-border-radius:50%;
     -o-border-radius:50%;
+    position: absolute;
+    top:-12px;
+    left:20px;
 }
-
-/* ul.menu__list {
-    margin: 0;
-    padding: 4px; 
-}
-ul.menu__list li {
-    display: inline;
-    margin-right: 5px;
-    padding: 3px;
-}*/
-/* ul.personal__list {
-    margin: 0;
-    padding: 4px;
-} */
-/*
-    ul.personal__list li {
-    display: inline; 
-    margin-right: 5px; 
-    padding: 3px; 
-}  */
 
 /* smoothies */
 
@@ -176,20 +186,14 @@ ul.menu__list li {
     height: 870px;
     display: flex;
     flex-flow: column nowrap;
-
-    /* -webkit-background-size: cover;
-    background-attachment: fixed;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
 }
 .smoothies__heading{
     font-size: 50px;
     font-weight: bold;
     color:#f7ae3b;
     text-align:center;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 85px;
+    margin-bottom: 33px;
     font-family: 'Mulish-ExtraBold';
 }
 .smoothies__text{
@@ -210,8 +214,11 @@ ul.menu__list li {
     flex-wrap: wrap;
     align-items:center;
     align-content: space-between;
-
+    
 }
+
+    
+
 .smoothies__icons{
     align-self:center;
 }
@@ -224,6 +231,7 @@ ul.menu__list li {
     flex:1;
     align-items:center;
     justify-content: center;
+    border-right:5px solid #f6edde;
 }
 .icons__heading{
     font-size: 25px;
@@ -238,7 +246,6 @@ ul.menu__list li {
 
 .about{
     display:flex;
-    align-items: center;
     height: 800px;
     background: url(../assets/images/bg_about1.png) no-repeat;
     background-position: center center;
@@ -249,18 +256,31 @@ ul.menu__list li {
     color: white;
 }
 .about__img{
-    margin-top: 60px;
-    margin-left: 140px;
-    margin-right: 140px;
+    position:relative;
+    top: 60px;
+    left: 140px;
+    right: 140px;
+    z-index: 1;
+}
+.about__reasons{
+    margin-left:240px;
+    margin-top: 95px;
 }
 .reasons__heading{
     font-size: 50px;
     font-weight: bold;
     color:#ffffff;
     text-align:left;
-    margin-top: 100px;
     font-family: Mulish-ExtraBold;
     width: 600px;
+    margin-top: 0;
+    position: relative;
+}
+.reasons__heading::after{
+    content:url(../assets/images/Line_awesome\ drink.png);
+    position: absolute;
+    left:50px;
+    bottom: -20px;
 }
 .reasons__heading--green{
     display: inline;
@@ -303,12 +323,14 @@ ul.menu__list li {
 .products{
     height:720px;
     margin:0;
+    padding: 0;
 }
 .products__list{
     display: flex;
     justify-content: space-between;
     align-items:center;
     margin: 0;
+    padding: 0;
 }
 #Dark_Chocolate{
     background-color:#663019;
@@ -337,6 +359,7 @@ ul.menu__list li {
     color:white;
     margin-top: 0;
     margin-bottom: 62px;
+    font-style:italic;
 }
 .product__list-item{
     display:flex;
@@ -394,7 +417,43 @@ ul.menu__list li {
 }
 .story__img-wrap{
     margin-top:120px;
+    position: relative;
 }
+.story__img-wrap::after{
+    content:url(../assets/images/Stamp__our\ story.png);
+    position: absolute;
+    left:-165px;
+    top:20px;
+}
+
+/* .story__img-wrap::after{
+    content:"";
+    width: 50px; 
+    height: 50px;
+    background: #cde8dd;
+    border-radius: 50%;
+}
+.story__img-wrap::after{
+    content:"";
+    width: 50px; 
+    height: 50px;
+    background: #cde8dd;
+    border-radius: 50%;
+}
+.story__img-wrap::after{
+    content:"";
+    width: 50px; 
+    height: 50px;
+    background: #cde8dd;
+    border-radius: 50%;
+}
+.story__img-wrap::after{
+    content:"";
+    width: 50px; 
+    height: 50px;
+    background: #cde8dd;
+    border-radius: 50%;
+} */
 .story__btn{
     align-self:center;
     display:flex;
@@ -416,8 +475,21 @@ ul.menu__list li {
     -o-border-radius:35px;
 }
 /* testimonials */
+/* .testimonials::before{
+    content:"";
+    width: 50px;
+    height: 50px;
+    background: #cde8dd;
+    border-radius: 50%;
+    position: absolute;
+    left:100%;
+    bottom:100%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+} */
 .testimonials{
-    height: 100vh;
     background:url(../assets/images/testimonials_bg.png);
     height:720px;
 }
@@ -429,6 +501,7 @@ ul.menu__list li {
 }
 .testimonials__heading{
     padding-top:115px;
+    margin: 0;
     text-align: center;
     font-size: 50px;
     color:#f7ae3b;
@@ -444,7 +517,7 @@ ul.menu__list li {
     margin-top: 117px;
 }
 .feedback__quote{
-    width:490px;
+    width:500px;
     margin: 0;
     text-align: center;
     color:white;
@@ -462,9 +535,10 @@ ul.menu__list li {
     justify-content: center;
     margin-top:121px;
 }
-.testimonials__controls:first-child{
-    margin-right: 100px;
+.controls__link{
+    margin-left: 100px;
 }
+
 /* blog */
 .blog{
     height:785px;
@@ -476,6 +550,38 @@ ul.menu__list li {
     font-size: 50px;
     color:#f7ae3b;
     font-family: Mulish-ExtraBold;
+}
+.blog__img-wrap{
+    position:relative;
+    left:360px;
+}
+.blog__inner{
+    display: flex;
+}
+.blog__article{
+    display: flex;
+    flex-direction: column;
+    margin-left: 400px;
+}
+.article__heading{
+    font-size: 30px;
+    color:#f2612d;
+    margin-top: 140px;
+    margin-bottom: 10px;
+}
+.article__date{
+    font-size: 16px;
+}
+.article__text{
+    font-size: 18px;
+    width:475px;
+    margin-top:50px;
+    margin-left:60px;
+    line-height:35px;
+}
+.article__link{
+    font-weight: bold;
+    color:black;
 }
 /* instagram */
 .instagram{
@@ -491,13 +597,53 @@ ul.menu__list li {
 }
 .instagram__list{
     display: flex;
-    margin-bottom:10px;
+    padding: 0;
 }
 /* footer */
 .footer__main{
     height: 372px;
     background: #f3ab3e;
     display:flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.footer__logo{
+    margin-top:135px;
+    /* margin-left: 90px; */
+}
+.footer__info{
+    display:flex;
+    flex-direction: column;
+}
+.info__list{
+    padding: 0;
+}
+.info__list-item{
+    font-size: 18px;
+    color:#6d450c;
+    font-family: "Mulish-Bold";
+    margin-bottom: 15px;
+}
+.footer__heading{
+    font-size: 26px;
+    font-family: "Mulish-ExtraBold";
+    color:white;
+    margin-top:76px;
+    margin-bottom: 40px;
+    padding:0;
+}
+.footer__payment{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.payment__box{
+    width:260px;
+}
+.payment__img{
+    margin-right: 15px;
+    margin-bottom: 25px;
 }
 .footer__bottom{
     height: 61px;
