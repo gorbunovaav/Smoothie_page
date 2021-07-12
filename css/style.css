@@ -50,7 +50,6 @@ button:hover {
     -moz-transform: scale(1.05);
     -ms-transform: scale(1.05);
     -o-transform: scale(1.05);
-    -webkit-filter: brightness(115%);
 }
 
 .content__btn--green-bg{
@@ -157,31 +156,31 @@ html,
 body {
     font-family: "Mulish-Regular";
     width: 100%;
-    /* min-width: 1910px; */
     margin: 0;
+    padding: 0;
 }
 
 /* header */
 
-header {
-    height: 1080px;
+.header {
+    height: 100vh;
     background: url(../assets/images/header-bg-img.png) no-repeat;
-    background-position: center center;
-    background-size: 100%;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
+    background-position: center;
+    background-size: cover;
     color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .header__top {
     padding: 86px 60px 100px;
     margin-bottom: 24px;
+    position: relative;
+}
+.header__navigation{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-
 }
 
 .menu__list {
@@ -206,7 +205,18 @@ header {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
 }
-
+.header__burger-btn{
+    background-color: transparent;
+    border:none;
+    position: fixed;
+    top:20px;
+    right: 20px;
+    display: none;
+}
+.header__burger-btn-icon{
+    width: 40px;
+    
+}
 .header__right-block {
     margin-right: 106px;
     margin-left: 40px;
@@ -277,10 +287,6 @@ header {
     text-align: center;
     line-height: 2.3;
     border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
 }
 
 .personal__number {
@@ -293,20 +299,13 @@ header {
     line-height: 2;
     font-size: 10px;
     color: black;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
     position: absolute;
     top: -12px;
     left: 20px;
-}
-
-@media screen and (max-width: 768px) {
-    .header__top {
-        display: none;
-
-    }
 }
 
 /* smoothies */
@@ -725,6 +724,7 @@ header {
 /* instagram */
 .instagram {
     height: 417px;
+    width: 100%;
     background: white;
     display: flex;
     flex-direction: column;
@@ -748,12 +748,15 @@ header {
 
 .instagram__list {
     display: flex;
+    justify-content: space-between;
     padding-left:0;
     padding-right: 0;
     padding-bottom: 10px;
 }
 .instagram__list-item{
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 .instagram__list-item::after{
     content: url(../assets/images/inst_white.png);
@@ -825,6 +828,7 @@ header {
     outline: none;
     padding-left: 65px;
     position: relative;
+    background-color: white;
 }
 .contacts__field::before{
     content: url(../assets/images/subscribe_Icon.png);
@@ -832,7 +836,58 @@ header {
     right: 0px;
     bottom: 0px;
 }
+.contacts__btn{
+    border:none;
+    outline:none;
+    background:transparent;
+    color:#6d450c;
+    font-family: Mulish-ExtraBold;
+    font-size: 18px;
+    margin-left: 185px;
+    margin-top: 35px;
+}
+.footer__contacts{
+    display: flex;
+    flex-direction: column;
+}
+.contacts__list{
+    display: flex;
+
+}
 .footer__bottom {
     height: 61px;
     background: #6d2b1f;
+}
+
+/* media */
+@media screen and (max-width: 768px) {
+    .header__navigation {
+        /* display: none; */
+        position: fixed;
+        background-color:#0aa566;
+        top: 0;
+        left:0 ;
+        right: 0;
+        bottom: 0;
+        z-index: 99999999;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        padding-top:150px;
+    }
+    .header__right-block{
+        margin-bottom: 80px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .menu__list{
+        flex-direction: column;
+
+    }
+    .menu__list-item{
+        margin: 0 0 50px;
+    }
+    .header__burger-btn{
+        display: block;
+        z-index: 99999999;
+    }
 }

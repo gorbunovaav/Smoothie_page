@@ -5,81 +5,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="normalize" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="normalize" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 
 <body>
     <header class="header">
         <div class="header__top">
-            <nav class="header__nav menu">
-                <ul class="menu__list">
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="">HOME</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="">SHOP</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="">STORY</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="">ABOUT</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="">BLOG</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="">TESTIMONIALS</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="header__navigation">
+                <nav class="header__nav menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="">HOME</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="">SHOP</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="">STORY</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="">ABOUT</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="">BLOG</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="">TESTIMONIALS</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__right-block">
+                    <div class="header__personal personal">
+                        <ul class="personal__list">
+                            <li class="personal__list-item">
+                                <a class="personal__link" href="">
+                                    <img class="personal__img" src="./assets/images/Search-icon.png" alt="Search-icon">
+                                </a>
+                            </li>
+                            <li class="personal__list-item">
+                                <a class="personal__link" href="">
+                                    <img class="personal__img" src="./assets/images/User-icon.png" alt="User-icon">
+                                </a>
+                            </li>
+                            <li class="personal__list-item">
+                                <a class="personal__link" href="">
+                                    <img class="personal__img" src="./assets/images/Cart-icon.png" alt="Cart-icon">
+                                    <span class="personal__number">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__social social">
+                        <ul class="social__list">
+                            <li class="social__list-item">
+                                <a class="social__link" href="">
+                                    <img class="social__img" src="./assets/images/Facebook-icon.png"
+                                        alt="Facebook-icon">
+                                </a>
+                            </li>
+                            <li class="social__list-item">
+                                <a class="social__link" href="">
+                                    <img class="social__img" src="./assets/images/Pinterest-icon.png"
+                                        alt="Pinterest-icon">
+                                </a>
+                            </li>
+                            <li class="social__list-item">
+                                <a class="social__link" href="">
+                                    <img class="social__img" src="./assets/images/Instagram-icon.png"
+                                        alt="Instagram-icon">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <a class="logo header__logo" href="">
                 <img class="logo__img" src="./assets/images/Logo.png" alt="logo">
             </a>
-            <div class="header__right-block">
-                <div class="header__personal personal">
-                    <ul class="personal__list">
-                        <li class="personal__list-item">
-                            <a class="personal__link" href="">
-                                <img class="personal__img" src="./assets/images/Search-icon.png" alt="Search-icon">
-                            </a>
-                        </li>
-                        <li class="personal__list-item">
-                            <a class="personal__link" href="">
-                                <img class="personal__img" src="./assets/images/User-icon.png" alt="User-icon">
-                            </a>
-                        </li>
-                        <li class="personal__list-item">
-                            <a class="personal__link" href="">
-                                <img class="personal__img" src="./assets/images/Cart-icon.png" alt="Cart-icon">
-                                <span class="personal__number">0</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="header__social social">
-                    <ul class="social__list">
-                        <li class="social__list-item">
-                            <a class="social__link" href="">
-                                <img class="social__img" src="./assets/images/Facebook-icon.png" alt="Facebook-icon">
-                            </a>
-                        </li>
-                        <li class="social__list-item">
-                            <a class="social__link" href="">
-                                <img class="social__img" src="./assets/images/Pinterest-icon.png" alt="Pinterest-icon">
-                            </a>
-                        </li>
-                        <li class="social__list-item">
-                            <a class="social__link" href="">
-                                <img class="social__img" src="./assets/images/Instagram-icon.png" alt="Instagram-icon">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <button class="header__burger-btn">
+                <img class="header__burger-btn-icon" src="./assets/images/menu.svg" alt="menu"> 
+            </button>
         </div>
+
         <div class="header__content content">
             <button class="content__btn--green-bg">
                 <span class="content__btn--text">Shop Now</span></button>
@@ -150,7 +159,7 @@
             </ul>
             <button class="reasons__btn--green-bg">
                 <span class="reasons__btn--text">About Organic Smoothie</span>
-                </button>
+            </button>
         </div>
     </section>
     <section class="products">
@@ -208,17 +217,18 @@
     <section class="testimonials">
         <h2 class="testimonials__heading">Why clients <span class="testimonials__heading--orange">LOVE</span> us?</h2>
         <div class="testimonials__inner">
-        <div class="testimonials__feedback feedback">
-            <blockquote class="feedback__quote text text--white">
-                ”Smoothie is great. I don't know what else to say. I will let my mum know about this, she could really
-                make use of Smoothie! Smoothie saved my business.”
-            </blockquote>
-            <cite class="feedback__cite">-from Santa Monica, CA</cite>
+            <div class="testimonials__feedback feedback">
+                <blockquote class="feedback__quote text text--white">
+                    ”Smoothie is great. I don't know what else to say. I will let my mum know about this, she could
+                    really
+                    make use of Smoothie! Smoothie saved my business.”
+                </blockquote>
+                <cite class="feedback__cite">-from Santa Monica, CA</cite>
+            </div>
+            <div class="testimonials__img-wrap">
+                <img class="testimonials__img" src="./assets/images/testimonials_Img.png" alt="testimonials_img">
+            </div>
         </div>
-        <div class="testimonials__img-wrap">
-            <img class="testimonials__img" src="./assets/images/testimonials_Img.png" alt="testimonials_img">
-        </div>
-    </div>
         <div class="testimonials__controls controls">
             <a class="controls__link" href="">
                 <img class="controls__img" src="./assets/images/Arrow_left.png" alt="Arrow_left">
@@ -231,18 +241,18 @@
     <section class="blog">
         <h2 class="blog__heading">Our blog</h2>
         <div class="blog__inner">
-        <div class="blog__img-wrap">
-            <img class="blog__img" src="./assets/images/our-blog_Img.png" alt="our-blog_img">
-        </div>
-        
-        <article class="blog__article article">
-            <h1 class="article__heading">ASAFOETIDA - THE NEXT TURMERIC?</h1>
-            <time class="article__date" datetime="2020-06-16">Jun 16, 2020</time>
-            <p class="article__text">
-                If the fruit ingredients and the green vegetable ingredients are both juiced ahead of time, the
-                mixed juice doesn't even have to be blended like a smoothie, i.e. a green juice or anything...
-                <a class="article__link" href="">Read more</a>
-            </p>
+            <div class="blog__img-wrap">
+                <img class="blog__img" src="./assets/images/our-blog_Img.png" alt="our-blog_img">
+            </div>
+
+            <article class="blog__article article">
+                <h1 class="article__heading">ASAFOETIDA - THE NEXT TURMERIC?</h1>
+                <time class="article__date" datetime="2020-06-16">Jun 16, 2020</time>
+                <p class="article__text">
+                    If the fruit ingredients and the green vegetable ingredients are both juiced ahead of time, the
+                    mixed juice doesn't even have to be blended like a smoothie, i.e. a green juice or anything...
+                    <a class="article__link" href="">Read more</a>
+                </p>
         </div>
         </article>
     </section>
@@ -268,9 +278,9 @@
     </section>
     <footer class="footer">
         <div class="footer__main">
-        <a class="logo footer__logo" href="">
-            <img class="logo__img" src="./assets/images/Logo.png" alt="logo">
-        </a>
+            <a class="logo footer__logo" href="">
+                <img class="logo__img" src="./assets/images/Logo.png" alt="logo">
+            </a>
             <div class="footer__info info">
                 <h4 class="footer__heading">Information</h4>
                 <ul class="info__list">
@@ -311,17 +321,17 @@
                 <ul class="contacts__list">
                     <li class="contacts__list-item">
                         <a class="contacts__link" href="">
-                            <img class="contacts__img" src="./assets/images/Facebook-icon.png" alt="Facebook-icon">
+                            <img class="contacts__img" src="./assets/images/Facebook_white.png" alt="Facebook-icon">
                         </a>
                     </li>
-                    <li class="personal__ist-item">
+                    <li class="personal__list-item">
                         <a class="contacts__link" href="">
-                            <img class="contacts__img" src="./assets/images/Pinterest-icon.png" alt="Pinterest-icon">
+                            <img class="contacts__img" src="./assets/images/Pinterest_white.png" alt="Pinterest-icon">
                         </a>
                     </li>
                     <li class="contacts__list-item">
                         <a class="contacts__link" href="">
-                            <img class="contacts__img" src="./assets/images/Instagram-icon.png" alt="Instagram-icon">
+                            <img class="contacts__img" src="./assets/images/Instagram_white.png" alt="Instagram-icon">
                         </a>
                     </li>
                 </ul>
